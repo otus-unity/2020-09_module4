@@ -7,16 +7,18 @@ public class PlayerWeapon : MonoBehaviourPun
 {
     public AbstractWeapon[] weapons;
     int currentWeapon = -1;
+    PlayerAmmo ammo;
     Animator animator;
 
     void Awake()
     {
+        ammo = GetComponent<PlayerAmmo>();
         animator = GetComponent<Animator>();
         foreach (var weapon in weapons)
             weapon.gameObject.SetActive(false);
     }
 
-    void SetWeapon(int index)
+    public void SetWeapon(int index)
     {
         if (index != currentWeapon) {
             if (currentWeapon >= 0)
@@ -27,6 +29,18 @@ public class PlayerWeapon : MonoBehaviourPun
             if (currentWeapon >= 0)
                 weapons[currentWeapon].gameObject.SetActive(true);
         }
+    }
+
+    public bool Shoot()
+    {
+        if (currentWeapon < 0 || ammo.ammo <= 0)
+            return false;
+
+        ammo.ammo--;
+        animator.SetTrigger("Shoot");
+        weapons[currentWeapon].Shoot();
+
+        return true;
     }
 
     void Update()
@@ -41,9 +55,7 @@ public class PlayerWeapon : MonoBehaviourPun
             }
         }
 
-        if (Input.GetMouseButtonDown(0) && currentWeapon >= 0) {
-            animator.SetTrigger("Shoot");
-            weapons[currentWeapon].Shoot();
-        }
+        if (Input.GetMouseButtonDown(0))
+            Shoot();
     }
 }

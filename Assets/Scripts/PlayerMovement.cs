@@ -18,7 +18,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        if (agent == null)
+        if (agent == null || !agent.isOnNavMesh)
             return;
 
         var horizontal = Input.GetAxis("Horizontal");

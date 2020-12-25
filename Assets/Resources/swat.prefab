@@ -1797,6 +1797,7 @@ GameObject:
   - component: {fileID: 3302372183904862766}
   - component: {fileID: 5571605101311059857}
   - component: {fileID: 5332078110944849612}
+  - component: {fileID: 1441905621028195120}
   - component: {fileID: 1502883345202204018}
   - component: {fileID: 6209022645927613855}
   - component: {fileID: 5581791687173387955}
@@ -1887,6 +1888,7 @@ MonoBehaviour:
   ObservedComponents:
   - {fileID: 5191442974714324877}
   - {fileID: 5332078110944849612}
+  - {fileID: 1441905621028195120}
   - {fileID: 3302372183904862766}
   viewIdField: 0
   InstantiationId: 0
@@ -1931,6 +1933,12 @@ MonoBehaviour:
   - Type: 9
     SynchronizeType: 0
     Name: Shoot
+  - Type: 1
+    SynchronizeType: 0
+    Name: IKLeftFootWeight
+  - Type: 1
+    SynchronizeType: 0
+    Name: IKRightFootWeight
   m_SynchronizeLayers:
   - SynchronizeType: 1
     LayerIndex: 0
@@ -1963,6 +1971,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
+--- !u!114 &1441905621028195120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4240933718755912996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0ae42265426acc42917905161909f47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ammo: 20
 --- !u!114 &1502883345202204018
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3840,12 +3861,6 @@ PrefabInstance:
       objectReference: {fileID: 903475646345530269}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03540b3c74a27184190d45cbf6a91144, type: 3}
---- !u!4 &857355378293043700 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1395968758485205507, guid: 03540b3c74a27184190d45cbf6a91144,
-    type: 3}
-  m_PrefabInstance: {fileID: 1781888455951823863}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &4908004050904735035 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6676078138805087948, guid: 03540b3c74a27184190d45cbf6a91144,
@@ -3858,3 +3873,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4a699a0262d4b6a95efb496f2c3bee8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &857355378293043700 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1395968758485205507, guid: 03540b3c74a27184190d45cbf6a91144,
+    type: 3}
+  m_PrefabInstance: {fileID: 1781888455951823863}
+  m_PrefabAsset: {fileID: 0}

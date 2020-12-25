@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b23f08d2ae4cba14087c1ed36193d82b, type: 3}
+  m_Name: BotTree
+  m_EditorClassIdentifier: 
+  mBehaviorSource:
+    behaviorName: Behavior
+    behaviorDescription: 
+    mTaskData:
+      types: []
+      parentIndex: 
+      startIndex: 
+      variableStartIndex: 
+      JSONSerialization: '{"EntryTask":{"Type":"BehaviorDesigner.Runtime.Tasks.EntryTask","NodeData":{"Offset":"(627,158)"},"ID":0,"Name":"Entry","Instant":true},"RootTask":{"Type":"BehaviorDesigner.Runtime.Tasks.Selector","NodeData":{"Offset":"(-3,118)"},"ID":1,"Name":"Selector","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(-494.1325,139.795914)"},"ID":2,"Name":"Sequence","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"GetHealth","NodeData":{"Offset":"(-116.071411,155)"},"ID":3,"Name":"Get
+        Health","Instant":true,"SharedInthealth":{"Type":"BehaviorDesigner.Runtime.SharedInt","Name":"health","IsShared":true,"Int32mValue":0},"SharedGameObjectbotObject":{"Type":"BehaviorDesigner.Runtime.SharedGameObject","Name":"botObject","IsShared":true}},{"Type":"BehaviorDesigner.Runtime.Tasks.Unity.Math.IntComparison","NodeData":{"Offset":"(-2.07141113,160)"},"ID":4,"Name":"Int
+        Comparison","Instant":true,"Operationoperation":"LessThan","SharedIntinteger1":{"Type":"BehaviorDesigner.Runtime.SharedInt","Name":"health","IsShared":true,"Int32mValue":0},"SharedIntinteger2":{"Type":"BehaviorDesigner.Runtime.SharedInt","Name":null,"Int32mValue":50}},{"Type":"NavigateToHealth","NodeData":{"Offset":"(144.928589,157)"},"ID":5,"Name":"Navigate
+        To Health","Instant":true,"SharedGameObjectbotObject":{"Type":"BehaviorDesigner.Runtime.SharedGameObject","Name":"botObject","IsShared":true}},{"Type":"BehaviorDesigner.Runtime.Tasks.Repeater","NodeData":{"Offset":"(269.9286,156)"},"ID":6,"Name":"Repeater","Instant":true,"SharedIntcount":{"Type":"BehaviorDesigner.Runtime.SharedInt","Name":null,"Int32mValue":0},"SharedBoolrepeatForever":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":null,"BooleanmValue":true},"SharedBoolendOnFailure":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":null,"BooleanmValue":true},"Children":[{"Type":"IsNavigating","NodeData":{"Offset":"(4.928589,106)"},"ID":7,"Name":"Is
+        Navigating","Instant":true,"SharedGameObjectbotObject":{"Type":"BehaviorDesigner.Runtime.SharedGameObject","Name":"botObject","IsShared":true}}]}]},{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(-115.49231,544.649658)"},"ID":8,"Name":"Sequence","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"GetAmmo","NodeData":{"Offset":"(-134.561035,157.897888)"},"ID":9,"Name":"Get
+        Ammo","Instant":true,"SharedIntammo":{"Type":"BehaviorDesigner.Runtime.SharedInt","Name":"ammo","IsShared":true,"Int32mValue":0},"SharedGameObjectbotObject":{"Type":"BehaviorDesigner.Runtime.SharedGameObject","Name":"botObject","IsShared":true}},{"Type":"BehaviorDesigner.Runtime.Tasks.Unity.Math.IntComparison","NodeData":{"Offset":"(0,160)"},"ID":10,"Name":"Int
+        Comparison","Instant":true,"Operationoperation":"LessThan","SharedIntinteger1":{"Type":"BehaviorDesigner.Runtime.SharedInt","Name":"ammo","IsShared":true,"Int32mValue":0},"SharedIntinteger2":{"Type":"BehaviorDesigner.Runtime.SharedInt","Name":null,"Int32mValue":1}},{"Type":"NavigateToAmmo","NodeData":{"Offset":"(127.683655,157.897888)"},"ID":11,"Name":"Navigate
+        To Ammo","Instant":true,"SharedGameObjectbotObject":{"Type":"BehaviorDesigner.Runtime.SharedGameObject","Name":null}},{"Type":"BehaviorDesigner.Runtime.Tasks.Repeater","NodeData":{"Offset":"(270.000061,160)"},"ID":12,"Name":"Repeater","Instant":true,"SharedIntcount":{"Type":"BehaviorDesigner.Runtime.SharedInt","Name":null,"Int32mValue":0},"SharedBoolrepeatForever":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":null,"BooleanmValue":true},"SharedBoolendOnFailure":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":null,"BooleanmValue":true},"Children":[{"Type":"IsNavigating","NodeData":{"Offset":"(6.10351563E-05,110)"},"ID":13,"Name":"Is
+        Navigating","Instant":true,"SharedGameObjectbotObject":{"Type":"BehaviorDesigner.Runtime.SharedGameObject","Name":"botObject","IsShared":true}}]}]},{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(152.728882,180.138733)"},"ID":14,"Name":"Sequence","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"GetDistanceToClosestEnemy","NodeData":{"Offset":"(-91.1842041,126.225708)"},"ID":15,"Name":"Get
+        Distance To Closest Enemy","Instant":true,"SharedFloatdistanceToEnemy":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"distanceToEnemy","IsShared":true,"SinglemValue":0},"SharedGameObjectbotObject":{"Type":"BehaviorDesigner.Runtime.SharedGameObject","Name":"botObject","IsShared":true}},{"Type":"BehaviorDesigner.Runtime.Tasks.Unity.Math.FloatComparison","NodeData":{"Offset":"(89.25061,126.225708)"},"ID":16,"Name":"Float
+        Comparison","Instant":true,"Operationoperation":"GreaterThan","SharedFloatfloat1":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"distanceToEnemy","IsShared":true,"SinglemValue":0},"SharedFloatfloat2":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":null,"SinglemValue":15}},{"Type":"NavigateToEnemyPlayer","NodeData":{"Offset":"(264.2505,126.225708)"},"ID":17,"Name":"Navigate
+        To Enemy Player","Instant":true,"SharedGameObjectbotObject":{"Type":"BehaviorDesigner.Runtime.SharedGameObject","Name":null}}]},{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(542.6476,494.274536)"},"ID":18,"Name":"Sequence","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"GetDistanceToClosestEnemy","NodeData":{"Offset":"(-147.352417,126.774475)"},"ID":19,"Name":"Get
+        Distance To Closest Enemy","Instant":true,"SharedFloatdistanceToEnemy":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"distanceToEnemy","IsShared":true,"SinglemValue":0},"SharedGameObjectbotObject":{"Type":"BehaviorDesigner.Runtime.SharedGameObject","Name":"botObject","IsShared":true}},{"Type":"BehaviorDesigner.Runtime.Tasks.Unity.Math.FloatComparison","NodeData":{"Offset":"(25.147583,130.524475)"},"ID":20,"Name":"Float
+        Comparison","Instant":true,"Operationoperation":"LessThanOrEqualTo","SharedFloatfloat1":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"distanceToEnemy","IsShared":true,"SinglemValue":0},"SharedFloatfloat2":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":null,"SinglemValue":15}},{"Type":"AttackEnemyPlayer","NodeData":{"Offset":"(188.897461,134.274475)"},"ID":21,"Name":"Attack
+        Enemy Player","Instant":true,"SharedGameObjectbotObject":{"Type":"BehaviorDesigner.Runtime.SharedGameObject","Name":null}},{"Type":"BehaviorDesigner.Runtime.Tasks.Wait","NodeData":{"Offset":"(330.147461,135.524475)"},"ID":22,"Name":"Wait","Instant":true,"SharedFloatwaitTime":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":null,"SinglemValue":1},"SharedBoolrandomWait":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":null,"BooleanmValue":false},"SharedFloatrandomWaitMin":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":null,"SinglemValue":1},"SharedFloatrandomWaitMax":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":null,"SinglemValue":1}}]}]},"Variables":[{"Type":"BehaviorDesigner.Runtime.SharedInt","Name":"health","IsShared":true,"Int32mValue":0},{"Type":"BehaviorDesigner.Runtime.SharedInt","Name":"ammo","IsShared":true,"Int32mValue":0},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"distanceToEnemy","IsShared":true,"SinglemValue":0},{"Type":"BehaviorDesigner.Runtime.SharedGameObject","Name":"botObject","IsShared":true}]}'
+      fieldSerializationData:
+        typeName: []
+        fieldNameHash: 
+        startIndex: 
+        dataPosition: 
+        unityObjects: []
+        byteData: 
+        byteDataArray: 
+      Version: 1.6.7

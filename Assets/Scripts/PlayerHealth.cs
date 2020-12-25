@@ -6,7 +6,9 @@ using Photon.Realtime;
 
 public class PlayerHealth : MonoBehaviour, IPunObservable
 {
-    [Range(0, 100)]
+    public const int Max = 100;
+
+    [Range(0, Max)]
     public int health;
 
     public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
@@ -23,5 +25,13 @@ public class PlayerHealth : MonoBehaviour, IPunObservable
         health -= damage;
         if (health < 0)
             health = 0;
+    }
+
+    [PunRPC]
+    void GiveHealthRPC(int amount)
+    {
+        health += amount;
+        if (health > Max)
+            health = Max;
     }
 }
