@@ -90,9 +90,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1395968758485205507}
-  - component: {fileID: 5210239527460366648}
+  - component: {fileID: 7850398439326140255}
   m_Layer: 8
-  m_Name: Ak-47
+  m_Name: RocketLauncher
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -115,7 +115,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -7.7520003, y: 121.245, z: 96.94701}
---- !u!114 &5210239527460366648
+--- !u!114 &7850398439326140255
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -124,12 +124,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1395968758484983331}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d4a699a0262d4b6a95efb496f2c3bee8, type: 3}
+  m_Script: {fileID: 11500000, guid: 14aca29a6f594c7ebc6c0f50a5b3daa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   source: {fileID: 0}
-  raycastDistance: 1000
-  damage: 1
+  damage: 10
 --- !u!1 &1395968758484983333
 GameObject:
   m_ObjectHideFlags: 0
